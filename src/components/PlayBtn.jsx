@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./playBtn.css";
 import Modal from "./Modal";
 
 function PlayBtn({ movie }) {
-  const [modal, setModal] = useState(false)
-  const toggleModal = ()=>{
+  const [modal, setModal] = useState(false);
+  const toggleModal = () => {
     setModal(!modal);
   };
 
@@ -20,7 +20,9 @@ function PlayBtn({ movie }) {
         </a>
         <p>Watch Trailer</p>
       </div>
-      {movie.active && <Modal movie={movie} status={modal} toggleModal={toggleModal}/>}
+      {movie.active && (
+        <Modal movie={movie} status={modal} toggleModal={toggleModal} />
+      )}
     </>
   );
 }
